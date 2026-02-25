@@ -101,8 +101,8 @@ nav:hover {
 
 .eq-icon { display: flex; gap: 3px; height: 18px; align-items: flex-end; }
 .eq-bar { width: 3px; background: var(--accent); border-radius: 2px; animation: eqAnim 1s infinite alternate; }
-.eq-bar:nth-child(2) { animation-delay: 1.2s; } /* Adjusted delay from nav */
-.eq-bar:nth-child(3) { animation-delay: 2.2s; } /* Adjusted delay from nav */
+.eq-bar:nth-child(2) { animation-delay: 1.2s; }
+.eq-bar:nth-child(3) { animation-delay: 2.2s; }
 @keyframes eqAnim { 0% { height: 5px; } 100% { height: 18px; } }
 
 .nav-links a {
@@ -131,9 +131,9 @@ nav:hover {
     background: var(--accent-gradient);
     color: white;
     padding: 11px 26px;
-    border-radius: 10px; /* Slightly rounded */
+    border-radius: 10px;
     text-decoration: none;
-    font-weight: 700; /* More contrast */
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: none;
@@ -143,7 +143,7 @@ nav:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 30px rgba(95, 78, 252, 0.4), 0 0 25px rgba(167, 139, 250, 0.5);
 }
-.btn-secondary { /* For secondary buttons */
+.btn-secondary {
     background: transparent;
     border: 1px solid var(--border);
     color: var(--text-main);
@@ -169,7 +169,7 @@ nav:hover {
 
 h1 {
     font-family: 'Electrolize', sans-serif;
-    font-size: clamp(3.5rem, 7vw, 5.5rem); /* Responsive font size */
+    font-size: clamp(3.5rem, 7vw, 5.5rem);
     font-weight: normal;
     line-height: 1.05;
     margin-bottom: 24px;
@@ -180,7 +180,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 1.1rem; /* 17.6px */
+    font-size: 1.1rem;
     color: var(--text-muted);
     max-width: 650px;
     margin-bottom: 50px;
@@ -194,25 +194,25 @@ h1 {
     width: 100%;
     max-width: 1280px;
     margin-top: 80px;
-    perspective: 1000px; /* Для 3D эффекта */
+    perspective: 1000px;
 }
 
 .showcase-img {
     width: 100%;
-    max-width: 80%; /* Уменьшаем максимальную ширину */
-    border-radius: 24px; /* Более скругленные углы */
+    max-width: 80%;
+    border-radius: 24px;
     border: 1px solid rgba(255,255,255,0.12);
     box-shadow: 0 50px 100px rgba(0,0,0,0.8), 0 0 120px rgba(167, 139, 250, 0.3);
     transition: transform 0.1s ease-out;
     transform-style: preserve-3d;
     will-change: transform;
-    display: block; /* Убирает лишний отступ снизу */
+    display: block;
 }
 
 /* === BENTO СЕТКА (Карточки преимуществ) === */
 .section-title {
     text-align: center;
-    font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive */
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 60px;
     letter-spacing: 0.5px;
@@ -239,7 +239,7 @@ h1 {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
-    cursor: pointer; /* Указываем, что это интерактивный элемент */
+    cursor: pointer;
 }
 
 /* Мягкое свечение при наведении */
@@ -257,7 +257,7 @@ h1 {
 .bento-card:hover .bento-card-glow { opacity: 1; }
 .bento-card:hover {
     border-color: var(--border-hover);
-    transform: translateY(-6px); /* Небольшое поднятие */
+    transform: translateY(-6px);
     background: var(--bg-card-hover);
     box-shadow: 0 15px 50px rgba(0,0,0,0.8), var(--shadow-card-hover);
 }
@@ -269,7 +269,7 @@ h1 {
     width: 70px; height: 70px;
     display: flex; align-items: center; justify-content: center;
     border-radius: 16px;
-    background: rgba(147, 89, 255, 0.08); /* Более яркий фиолетовый */
+    background: rgba(147, 89, 255, 0.08);
     border: 1px solid rgba(147, 89, 255, 0.2);
 }
 
@@ -277,10 +277,10 @@ h1 {
 .card-icon svg {
     width: 36px;
     height: 36px;
-    stroke: var(--accent-light); /* Светло-фиолетовый */
+    stroke: var(--accent-light);
     stroke-width: 1.6;
     fill: none;
-    filter: drop-shadow(0 0 12px rgba(167, 139, 250, 0.6)); /* Большее свечение */
+    filter: drop-shadow(0 0 12px rgba(167, 139, 250, 0.6));
 }
 
 .bento-card h3 { font-size: 26px; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.2px;}
@@ -302,8 +302,8 @@ h1 {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-card);
-    width: 340px; /* Увеличили ширину */
-    padding: 45px 35px; /* Увеличили padding */
+    width: 340px;
+    padding: 45px 35px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
@@ -330,14 +330,14 @@ h1 {
     margin-bottom: 20px;
 }
 
-.price-header i { /* Font Awesome */
+.price-header i {
     font-size: 18px;
     color: var(--accent-light);
     filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.5));
 }
 
 .price-title {
-    font-size: 38px; /* Увеличили размер */
+    font-size: 38px;
     font-weight: 800;
     margin-bottom: 15px;
     display: flex;
@@ -345,7 +345,7 @@ h1 {
     gap: 10px;
     line-height: 1.1;
 }
-.price-title small { /* Style for small text in price title */
+.price-title small {
     font-size: 16px; color: var(--text-muted); font-weight: 500;
 }
 
@@ -353,36 +353,36 @@ h1 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(147, 89, 255, 0.15); /* Цвет бэйджа */
+    background: rgba(147, 89, 255, 0.15);
     color: var(--accent-light);
-    padding: 5px 10px; /* Увеличили padding */
-    border-radius: 8px; /* Скругление */
+    padding: 5px 10px;
+    border-radius: 8px;
     border: 1px solid rgba(147, 89, 255, 0.3);
-    font-size: 11px; /* Увеличили шрифт */
+    font-size: 11px;
     font-weight: 600;
 }
 .badge i { font-size: 14px; margin-right: 5px; }
 
 .price-desc {
     color: var(--text-muted);
-    font-size: 14px; /* Увеличили шрифт */
+    font-size: 14px;
     line-height: 1.7;
     margin-bottom: 30px;
-    min-height: 65px; /* Увеличили высоту */
+    min-height: 65px;
 }
 
 .btn-outline {
     width: 100%;
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.12); /* Более явная граница */
+    border: 1px solid rgba(255,255,255,0.12);
     color: white;
-    padding: 14px; /* Увеличили padding */
-    border-radius: 12px; /* Более скругленные */
-    font-weight: 600; /* Изменили вес */
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 600;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    font-size: 14px; /* Размер шрифта */
-    margin-top: auto; /* Прижимает кнопку вниз */
+    font-size: 14px;
+    margin-top: auto;
 }
 
 .btn-outline:hover {
@@ -404,8 +404,8 @@ h1 {
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.price-gfx i { /* Font Awesome */
-    font-size: 60px; /* Увеличили размер */
+.price-gfx i {
+    font-size: 60px;
     color: white;
     filter: drop-shadow(0 0 15px rgba(167, 139, 250, 0.5));
 }
@@ -459,13 +459,13 @@ h1 {
     background: var(--accent);
     border-radius: 50%;
     margin-right: 10px;
-    margin-left: -18px; /* Сдвигаем маркер */
+    margin-left: -18px;
     vertical-align: middle;
     box-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
 }
-.log-item.added::before { background: #22c55e; box-shadow: 0 0 8px rgba(34, 197, 94, 0.8); } /* Green */
-.log-item.changed::before { background: #f59e0b; box-shadow: 0 0 8px rgba(245,158,11,0.8); } /* Orange */
-.log-item.fixed::before { background: #ef4444; box-shadow: 0 0 8px rgba(239, 68, 64, 0.8); } /* Red */
+.log-item.added::before { background: #22c55e; box-shadow: 0 0 8px rgba(34, 197, 94, 0.8); }
+.log-item.changed::before { background: #f59e0b; box-shadow: 0 0 8px rgba(245,158,11,0.8); }
+.log-item.fixed::before { background: #ef4444; box-shadow: 0 0 8px rgba(239, 68, 64, 0.8); }
 
 /* === WEB VERSIYA (ПОКА НЕ РАБОТАЕТ) === */
 .web-version-section {
@@ -480,7 +480,7 @@ h1 {
     font-size: 12px; color: var(--accent); font-weight: 600;
     text-transform: uppercase; letter-spacing: 3px; margin-top: 20px;
 }
-.web-version-section .comming-soon-icon {
+.web-version-section .coming-soon-icon {
     font-size: 20px; color: var(--accent);
     margin: 0 5px 0 10px;
     animation: spinBeat 1.5s infinite;
@@ -493,7 +493,7 @@ h1 {
 
 /* === СЕКЦИЯ СКАЧИВАНИЯ ЛАУНЧЕРА === */
 .launcher-download {
-    margin-top: 100px; /* Отступ от предыдущей секции */
+    margin-top: 100px;
     padding: 60px 8%;
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -503,13 +503,13 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    max-width: 900px; /* Ограничиваем ширину */
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.5); /* Более темная тень */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.5);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
-    overflow: hidden; /* Для круглого свечения */
+    overflow: hidden;
 }
 
 .launcher-download::before { /* Округлое свечение */
@@ -517,22 +517,21 @@ h1 {
     position: absolute;
     inset: 0;
     border-radius: var(--radius-card);
-    background: radial-gradient(circle at center, rgba(167, 139, 250, 0.15), transparent 70%);
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(167, 139, 250, 0.15), transparent 70%);
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
     z-index: 0;
 }
 
-.launcher-download:hover::before { opacity: 1; } /* Показываем свечение при наведении */
-
+.launcher-download:hover::before { opacity: 1; }
 .launcher-download:hover {
     transform: translateY(-6px);
     box-shadow: 0 20px 70px rgba(0,0,0,0.6), var(--shadow-card-hover);
 }
 
 .launcher-icon {
-    width: 80px; /* Размер иконки */
+    width: 80px;
     height: 80px;
     margin-bottom: 25px;
 }
@@ -542,12 +541,12 @@ h1 {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 30px;
-    max-width: 500px; /* Уменьшаем ширину текста */
+    max-width: 500px;
 }
 
 .launcher-download .btn-primary {
-    padding: 14px 30px; /* Увеличили padding кнопки */
-    font-size: 16px; /* Увеличили шрифт кнопки */
+    padding: 14px 30px;
+    font-size: 16px;
 }
 
 /* === МОДАЛЬНОЕ ОКНО ПОКУПКИ === */
@@ -557,7 +556,7 @@ h1 {
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(20px);
     z-index: 1000;
-    display: none; /* По умолчанию скрыто */
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -647,7 +646,7 @@ h1 {
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.9s cubic-bezier(0.215, 0.610, 0.355, 1); /* Более плавный */
+    transition: all 0.9s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 .reveal.active {
     opacity: 1;
@@ -663,40 +662,131 @@ footer {
 }
 
 /* === АДАПТИВНОСТЬ === */
-@media (max-width: 1024px) {
-    .bento-grid { grid-template-columns: repeat(2, 1fr); }
-    .bento-card.card-large { grid-column: span 2; }
-    nav { padding: 22px 4%; }
-    .logo { font-size: 20px; }
+@media (max-width: 1024px) { /* Планшеты */
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 5%; /* Add padding for smaller screens */
+    }
+    .bento-card.card-large {
+        grid-column: span 2;
+    }
+    nav {
+        padding: 18px 5%;
+    }
+    .logo {
+        font-size: 20px;
+    }
     .nav-links a { margin: 0 15px; }
     h1 { font-size: clamp(3rem, 6vw, 4.5rem); }
-    .section-title { font-size: clamp(2rem, 4vw, 3rem); }
-    .price-item { width: 90%; }
-    .launcher-download { padding: 40px 5%; } /* Уменьшили padding */
-}
-
-@media (max-width: 768px) {
-    .bento-grid { grid-template-columns: 1fr; }
-    .bento-card.card-large { grid-column: span 1; }
-    nav { padding: 18px 4%; flex-wrap: wrap; justify-content: center; }
-    .logo { order: 1; margin-bottom: 10px; }
-    .nav-links { order: 3; width: 100%; margin-top: 10px; justify-content: center; }
-    .nav-links a { margin: 0 12px; }
-    .btn-primary { order: 2; }
-    
-    h1 { font-size: clamp(2.5rem, 5.5vw, 3.5rem); }
-    .section-title { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 40px; }
-    .hero { padding: 150px 4% 80px; }
-    .features { padding: 80px 4%; }
-    .pricing { padding: 80px 4%; }
-    .price-item { width: 100%; padding: 35px 25px; }
+    .section-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 40px; }
+    .hero { padding: 150px 5% 100px; }
+    .features { padding: 80px 5%; }
+    .pricing { padding: 80px 5%; }
+    .price-item { width: 45%; } /* Two items per row */
     .changelog-container, .web-version-section { padding: 40px 5%; }
+    .changelog-container { max-width: 90%; } /* Allow container to stretch */
     .changelog-header, .web-version-section h2 { font-size: 32px; }
     .log-list { padding-left: 18px; }
     .log-item { font-size: 14px; }
-    .launcher-download { margin-top: 70px; padding: 40px 5%; } /* Уменьшили отступ */
-    .launcher-icon { width: 60px; height: 60px; margin-bottom: 20px; }
+    .launcher-download {
+        margin-top: 70px;
+        padding: 50px 5%; /* Adjust padding */
+        max-width: 85%; /* Adjust max width */
+    }
+    .launcher-icon { width: 70px; height: 70px; margin-bottom: 20px; }
     .launcher-download p { font-size: 15px; }
+    /* Modal adjustments for tablets */
+    .modal-content { width: 80%; }
+}
+
+@media (max-width: 768px) { /* Мобильные устройства */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        padding: 0 5%; /* Padding for mobile, similar to tablet */
+    }
+    .bento-card.card-large {
+        grid-column: span 1;
+    }
+    nav {
+        padding: 15px 5%; /* Smaller padding */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Space between items when wrapped */
+    }
+    .logo {
+        order: 1;
+        margin-bottom: 5px; /* Less margin */
+        font-size: 18px; /* Smaller logo */
+    }
+    .nav-links {
+        order: 3;
+        width: 100%;
+        margin-top: 5px; /* Less margin */
+        display: flex;
+        flex-wrap: wrap; /* Allow links to wrap */
+        justify-content: center;
+        gap: 8px 12px; /* Spacing between links */
+    }
+    .nav-links a {
+        margin: 0; /* Remove margin, rely on gap */
+        font-size: 13px; /* Smaller links */
+        padding-bottom: 2px;
+    }
+    .nav-links a::after { height: 1px; } /* Thinner underline */
+    .btn-primary { /* Purchase button */
+        order: 2;
+        padding: 10px 20px; /* Smaller button */
+        font-size: 13px;
+    }
+    
+    h1 { font-size: clamp(2.5rem, 5.5vw, 3.5rem); }
+    .section-title { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 30px; } /* Less margin */
+    .hero { padding: 120px 5% 70px; } /* Adjusted padding */
+    .features { padding: 60px 5%; }
+    .pricing { padding: 60px 5%; }
+    .price-item {
+        width: 100%; /* Full width on mobile */
+        padding: 30px 20px; /* Smaller padding */
+    }
+    .price-title { font-size: 32px; } /* Smaller price */
+    .price-desc { min-height: auto; } /* Remove min height */
+    .btn-outline { padding: 12px; font-size: 13px; } /* Smaller button */
+    .price-gfx { margin-top: 30px; height: 120px; } /* Smaller graphic */
+    .price-gfx i { font-size: 45px; }
+
+    .changelog-container, .web-version-section {
+        padding: 30px 5%; /* Smaller padding */
+    }
+    .changelog-header, .web-version-section h2 { font-size: 28px; margin-bottom: 15px; }
+    .log-list { padding-left: 18px; }
+    .log-item { font-size: 14px; margin-bottom: 8px; }
+    .log-version { font-size: 18px; margin-bottom: 10px; }
+
+    .launcher-download {
+        margin-top: 60px; /* Smaller margin */
+        padding: 40px 5%; /* Smaller padding */
+        max-width: 90%; /* Adjust max width */
+    }
+    .launcher-icon { width: 60px; height: 60px; margin-bottom: 15px; }
+    .launcher-download p { font-size: 14px; margin-bottom: 20px; }
+    .launcher-download .btn-primary {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+
+    /* Modal adjustments for mobile */
+    .modal-content { width: 90%; padding: 35px; }
+    .modal-header { font-size: 24px; }
+    .modal-body p { font-size: 14px; }
+    .contact-info a { font-size: 14px; }
+    .contact-info i { font-size: 18px; }
+    .modal-btn-purchase { font-size: 14px; padding: 10px 25px; }
+
+    /* Ambient background adjustment for small screens */
+    .orb-1, .orb-2 { width: 300px; height: 300px; filter: blur(90px); }
+    .orb-1 { top: -5%; left: -20%; animation-delay: -4s; }
+    .orb-2 { bottom: -15%; right: -15%; animation-delay: -6s; }
 }
 
 /* === U notification (for Web Version) === */

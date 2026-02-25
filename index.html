@@ -165,7 +165,7 @@
         
         <!-- New section for Launcher Download -->
         <div class="launcher-download reveal" style="transition-delay: 0.4s;">
-            <i class="fa-solid fa-crown"></i> <!-- Assuming image.png is your launcher icon -->
+            <img src="image.png" alt="Launcher Icon" class="launcher-icon"> <!-- Assuming image.png is your launcher icon -->
             <p>
                 Установите OMNI Player на свой компьютер для полного погружения в мир звука.
             </p>
@@ -217,7 +217,16 @@
                     // Only add the 'active' class once and apply delay based on element order
                     if (!el.classList.contains('active')) {
                         el.classList.add('active');
-                        el.style.transitionDelay = `${index * 0.08}s`; // Apply delay based on DOM order
+                        // Simple delay based on index, can be adjusted for better flow
+                        let delay = 0;
+                        // Special handling for nav elements if needed, otherwise just loop
+                        if(el.closest('nav')) {
+                            // you might want to adjust delays for nav items specifically or omit them
+                        } else {
+                             delay = index * 0.08; // Adjust multiplier as needed
+                        }
+                        // Apply the delay - ensuring it's applied on the *first* activation
+                        el.style.transitionDelay = `${delay}s`;
                     }
                 }
             });
@@ -259,24 +268,35 @@
                 card.style.setProperty('--mouse-y', `${y}px`);
             });
         });
+        
+        // Effect on Download Launcher Card
+        const launcherCard = document.querySelector('.launcher-download');
+        if(launcherCard) {
+            launcherCard.addEventListener('mousemove', e => {
+                 const rect = launcherCard.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                launcherCard.style.setProperty('--mouse-x', `${x}px`);
+                launcherCard.style.setProperty('--mouse-y', `${y}px`);
+            });
+        }
 
         // Модальное окно покупки
         const purchaseModal = document.getElementById('purchaseModal');
         const modalHeaderDiv = document.getElementById('modalHeader');
 
         function openPurchaseModal(plan = '') {
-            if (plan) {
-                modalHeaderDiv.innerHTML = `<h2 class="modal-header">Покупка OMNI Player - ${plan}</h2>`;
-            } else {
-                 modalHeaderDiv.innerHTML = `<h2 class="modal-header">Покупка OMNI Player</h2>`;
-            }
+            const headerContent = plan
+                ? `<h2 class="modal-header">Покупка OMNI Player - ${plan}</h2>`
+                : `<h2 class="modal-header">Покупка OMNI Player</h2>`;
+            modalHeaderDiv.innerHTML = headerContent;
             purchaseModal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden'; // Freeze background scroll
         }
 
         function closePurchaseModal() {
             purchaseModal.style.display = 'none';
-            document.body.style.overflow = '';
+            document.body.style.overflow = ''; // Unfreeze background scroll
         }
         
         function openContacts() {
@@ -286,7 +306,7 @@
 
         function showWebSoon() {
             const notification = document.getElementById('soon-notification');
-            if (!notification.textContent) { 
+            if (!notification.textContent) { // Avoid re-adding if already showing
                 notification.innerHTML = `
                     <i class="fa-solid fa-globe"></i> Скоро!<i class="fa-solid fa-triangle-exclamation"></i> Web версия находится в разработке.
                 `;
@@ -296,11 +316,13 @@
                 setTimeout(() => {
                     notification.style.opacity = '0';
                     notification.style.transform = 'translateY(20px)';
+                    // Clear content after transition
                     setTimeout(() => notification.textContent = '', 400); 
-                }, 4000);
+                }, 4000); // Show for 4 seconds
             }
         }
 
+        // Add the CSS for the notification dynamically if it doesn't exist
         if (!document.getElementById('soon-notification-style')) {
             const soonStyle = document.createElement('style');
             soonStyle.id = 'soon-notification-style';
