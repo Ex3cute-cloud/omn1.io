@@ -200,7 +200,24 @@
             <button class="btn-primary modal-btn-purchase" onclick="openContacts()">Связаться с менеджером</button>
         </div>
     </div>
+<!-- Оверлей технического обслуживания -->
+<div class="maintenance-overlay" id="maintenanceOverlay">
+    <!-- Фоновая музыка (автовоспроизведение) -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_07a5f2163f.mp3?filename=ambient-piano-amp-strings-10711.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
 
+    <div class="maintenance-content">
+        <div class="maintenance-icon">
+            <i class="fa-solid fa-tools"></i>  <!-- Заменено на иконку инструментов -->
+        </div>
+        <h1 class="maintenance-title">Сайт на тех. обслуживании</h1>
+        <p class="maintenance-text">В целях обновления!</p>
+        <p class="maintenance-subtext">Мы скоро вернёмся. Приносим извинения за неудобства.</p>
+        <!-- Кнопка удалена -->
+    </div>
+</div>
     <!-- Уведомление "Скоро" -->
     <div id="soon-notification"></div>
 

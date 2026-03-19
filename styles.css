@@ -803,3 +803,105 @@ footer {
 #soon-notification i { font-size: 1em; margin: 0 5px; }
 #soon-notification .fa-triangle-exclamation { animation: warnBeat 1.4s infinite; }
 @keyframes warnBeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+
+/* === ОВЕРЛЕЙ ТЕХНИЧЕСКОГО ОБСЛУЖИВАНИЯ === */
+.maintenance-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    animation: fadeInOverlay 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes fadeInOverlay {
+    from { opacity: 0; backdrop-filter: blur(0); }
+    to { opacity: 1; backdrop-filter: blur(16px); }
+}
+
+.maintenance-content {
+    max-width: 600px;
+    width: 90%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-hover);
+    border-radius: var(--radius-card);
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 80px var(--accent-glow);
+    transform: scale(0.9);
+    animation: scaleIn 0.5s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes scaleIn {
+    to { transform: scale(1); }
+}
+
+.maintenance-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+    color: var(--accent-light);
+    filter: drop-shadow(0 0 20px var(--accent));
+    animation: subtleFloat 3s infinite alternate ease-in-out;
+}
+
+@keyframes subtleFloat {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+.maintenance-title {
+    font-family: 'Electrolize', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+.maintenance-text {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    color: var(--accent-light);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.maintenance-subtext {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0; /* Убрано место под кнопку */
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .maintenance-content {
+        padding: 30px 20px;
+    }
+    .maintenance-icon {
+        font-size: 60px;
+    }
+    .maintenance-title {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+    }
+    .maintenance-text {
+        font-size: clamp(1rem, 3.5vw, 1.6rem);
+    }
+}
+
+/* Для совсем маленьких экранов */
+@media (max-width: 480px) {
+    .maintenance-icon {
+        font-size: 50px;
+    }
+    .maintenance-content {
+        padding: 25px 15px;
+    }
+}
